@@ -1,0 +1,10 @@
+
+;python:S125"Remove this commented out code.(ĞÉúáúÿÿÿÿ
+Ppython:S1172"8Remove the unused function parameter "confusion_matrix".(–À
+;python:S125"Remove this commented out code.(ªş˜şÿÿÿÿ
+;python:S125?"Remove this commented out code.(ğ†·Æûÿÿÿÿ
+Ppython:S1172R"3Remove the unused function parameter "layer_names".(Ç‹ğ˜ùÿÿÿÿ
+qpython:S3776R"TRefactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.(Ç‹ğ˜ùÿÿÿÿ
+;python:S125y"Remove this commented out code.(ÙËº³úÿÿÿÿ
+7python:S125Å"Remove this commented out code.(®®Ì‡
+7python:S125Ê"Remove this commented out code.(ĞÖ‰
