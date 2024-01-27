@@ -1,0 +1,149 @@
+X_train shape (60000, 28, 28, 1)
+y_train shape (60000,)
+X_test shape (10000, 28, 28, 1)
+y_test shape (10000,)
+Shape before one-hot encoding:  (60000,)
+Shape after one-hot encoding:  (60000, 10)
+
+Number of layers: 4
+layer:0
+ weights shape  (3, 3, 1, 15)
+
+(1, 15)
+layer:1
+layer:2
+layer:3
+ weights shape  (3, 3, 15, 30)
+(15, 30)
+Epoch 1/20
+422/422 [==============================] - 143s 332ms/step - loss: 0.7927 - accuracy: 0.7599 - val_loss: 0.2257 - val_accuracy: 0.9377
+Epoch 2/20
+422/422 [==============================] - 141s 334ms/step - loss: 0.3025 - accuracy: 0.9101 - val_loss: 0.1679 - val_accuracy: 0.9550
+Epoch 3/20
+422/422 [==============================] - 125s 295ms/step - loss: 0.2309 - accuracy: 0.9301 - val_loss: 0.1363 - val_accuracy: 0.9628
+Epoch 4/20
+422/422 [==============================] - 108s 255ms/step - loss: 0.1953 - accuracy: 0.9416 - val_loss: 0.1230 - val_accuracy: 0.9687
+Epoch 5/20
+422/422 [==============================] - 105s 250ms/step - loss: 0.1665 - accuracy: 0.9493 - val_loss: 0.1092 - val_accuracy: 0.9698
+Epoch 6/20
+422/422 [==============================] - 102s 243ms/step - loss: 0.1522 - accuracy: 0.9546 - val_loss: 0.1002 - val_accuracy: 0.9740
+Epoch 7/20
+422/422 [==============================] - 105s 250ms/step - loss: 0.1384 - accuracy: 0.9581 - val_loss: 0.0927 - val_accuracy: 0.9740
+Epoch 8/20
+422/422 [==============================] - 99s 234ms/step - loss: 0.1274 - accuracy: 0.9618 - val_loss: 0.0907 - val_accuracy: 0.9753
+Epoch 9/20
+422/422 [==============================] - 102s 243ms/step - loss: 0.1184 - accuracy: 0.9642 - val_loss: 0.0872 - val_accuracy: 0.9788
+Epoch 10/20
+422/422 [==============================] - 105s 248ms/step - loss: 0.1117 - accuracy: 0.9652 - val_loss: 0.0812 - val_accuracy: 0.9778
+Epoch 11/20
+422/422 [==============================] - 101s 239ms/step - loss: 0.1051 - accuracy: 0.9678 - val_loss: 0.0830 - val_accuracy: 0.9773
+Epoch 12/20
+422/422 [==============================] - 101s 241ms/step - loss: 0.0987 - accuracy: 0.9698 - val_loss: 0.0745 - val_accuracy: 0.9790
+Epoch 13/20
+422/422 [==============================] - 95s 226ms/step - loss: 0.0933 - accuracy: 0.9716 - val_loss: 0.0728 - val_accuracy: 0.9797
+Epoch 14/20
+422/422 [==============================] - 89s 211ms/step - loss: 0.0884 - accuracy: 0.9724 - val_loss: 0.0710 - val_accuracy: 0.9800
+Epoch 15/20
+422/422 [==============================] - 91s 215ms/step - loss: 0.0828 - accuracy: 0.9743 - val_loss: 0.0682 - val_accuracy: 0.9800
+Epoch 16/20
+422/422 [==============================] - 95s 226ms/step - loss: 0.0817 - accuracy: 0.9751 - val_loss: 0.0699 - val_accuracy: 0.9808
+Epoch 17/20
+422/422 [==============================] - 81s 191ms/step - loss: 0.0773 - accuracy: 0.9769 - val_loss: 0.0659 - val_accuracy: 0.9803
+Epoch 18/20
+422/422 [==============================] - 62s 148ms/step - loss: 0.0742 - accuracy: 0.9769 - val_loss: 0.0680 - val_accuracy: 0.9805
+Epoch 19/20
+422/422 [==============================] - 60s 141ms/step - loss: 0.0695 - accuracy: 0.9778 - val_loss: 0.0659 - val_accuracy: 0.9807
+Epoch 20/20
+422/422 [==============================] - 66s 156ms/step - loss: 0.0681 - accuracy: 0.9788 - val_loss: 0.0611 - val_accuracy: 0.9832
+Show loss on display
+Number of layers: 4
+layer:0
+ weights shape  (3, 3, 1, 15)
+(1, 15)
+layer:1
+layer:2
+layer:3
+ weights shape  (3, 3, 15, 30)
+(15, 30)
+1/1 [==============================] - 0s 83ms/step
+1/1 [==============================] - 0s 71ms/step
+layer:0
+15
+layer:1
+15
+layer:2
+15
+layer:3
+30
+(1, 26, 26, 15)
+(1, 26, 26, 15)
+(1, 26, 26, 15)
+(1, 24, 24, 30)
+Show activations on display
+1/1 [==============================] - 0s 26ms/step
+1/1 [==============================] - 0s 76ms/step
+layer:0
+15
+layer:1
+15
+layer:2
+15
+layer:3
+30
+(1, 26, 26, 15)
+(1, 26, 26, 15)
+(1, 26, 26, 15)
+(1, 24, 24, 30)
+Show activations on display
+313/313 [==============================] - 6s 18ms/step
+Show confusion matrix on display
+              precision    recall  f1-score   support
+           0     0.9760    0.9939    0.9848       980
+           1     0.9903    0.9921    0.9912      1135
+           2     0.9805    0.9748    0.9776      1032
+           3     0.9773    0.9782    0.9777      1010
+           4     0.9817    0.9817    0.9817       982
+           5     0.9799    0.9821    0.9810       892
+           6     0.9843    0.9843    0.9843       958
+           7     0.9815    0.9825    0.9820      1028
+           8     0.9794    0.9743    0.9768       974
+           9     0.9799    0.9673    0.9736      1009
+    accuracy                         0.9812     10000
+   macro avg     0.9811    0.9811    0.9811     10000
+weighted avg     0.9812    0.9812    0.9812     10000
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv2d (Conv2D)             (None, 26, 26, 15)        150
+
+ dropout (Dropout)           (None, 26, 26, 15)        0
+
+ max_pooling2d (MaxPooling2  (None, 26, 26, 15)        0
+ D)
+
+ conv2d_1 (Conv2D)           (None, 24, 24, 30)        4080
+
+ dropout_1 (Dropout)         (None, 24, 24, 30)        0
+
+ max_pooling2d_1 (MaxPoolin  (None, 24, 24, 30)        0
+ g2D)
+
+ conv2d_2 (Conv2D)           (None, 22, 22, 60)        16260
+
+ dropout_2 (Dropout)         (None, 22, 22, 60)        0
+
+ max_pooling2d_2 (MaxPoolin  (None, 22, 22, 60)        0
+ g2D)
+
+ flatten (Flatten)           (None, 29040)             0
+
+ dense (Dense)               (None, 100)               2904100
+
+ dense_1 (Dense)             (None, 10)                1010
+
+=================================================================
+Total params: 2925600 (11.16 MB)
+Trainable params: 2925600 (11.16 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________

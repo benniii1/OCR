@@ -170,7 +170,7 @@ print("y_train shape", y_train.shape)
 print("X_test shape", X_test.shape)
 print("y_test shape", y_test.shape)
 
-# normalizing the data 
+# normalizing the data
 X_train /= 255
 X_test /= 255
 
@@ -180,12 +180,12 @@ print("Shape before one-hot encoding: ", y_train.shape)
 Y_train = to_categorical(y_train, n_classes)
 Y_test = to_categorical(y_test, n_classes)
 print("Shape after one-hot encoding: ", Y_train.shape)
-n_cnn1planes = 15
+n_cnn1planes = 15  # Set values between 10 and 100
 n_cnn1kernel = 3
 n_poolsize = 1
 
 # Stride defines the step size at which the filter moves across the input during convolution.
-# A larger stride results in a reduction of the spatial dimensions of the output feature map. 
+# A larger stride results in a reduction of the spatial dimensions of the output feature map.
 # Stride can be adjusted to control the level of downsampling in the network.
 # Stride is a critical parameter for controlling the spatial resolution of the feature maps and influencing the receptive field of the network.
 n_strides = 1
@@ -194,11 +194,11 @@ dropout = 0.3
 
 n_epochs = 20
 
-model_name = '../handwritten-ocr-cnn/CNN_Handwritten_OCR_CNN' + str(n_cnn1planes) + '_KERNEL' + str(
-    n_cnn1kernel) + '_Epochs' + str(n_epochs)
+model_name = '../task_2_handwritten-ocr-cnn/CNN_Handwritten_OCR_CNN' + str(n_cnn1planes) + '_KERNEL' + \
+             str(n_cnn1kernel) + '_Epochs' + str(n_epochs)
 # figure_format='svg'
 figure_format = 'png'
-figure_path = '../handwritten-ocr-cnn/'
+figure_path = '../task_2_handwritten-ocr-cnn/'
 log_path = './log'
 
 # layer_outputs = [layer.output for layer in model.layers[1:7]]
@@ -217,6 +217,11 @@ cnn2 = Conv2D(n_cnn1planes * 2, kernel_size=(n_cnn1kernel, n_cnn1kernel), stride
 model.add(cnn2)
 model.add(MaxPool2D(pool_size=(n_poolsize, n_poolsize)))
 
+cnn3 = Conv2D(n_cnn1planes*4, kernel_size=(n_cnn1kernel, n_cnn1kernel), strides=(n_strides,n_strides), padding='valid',
+              activation='relu')
+model.add(cnn3)
+model.add(MaxPool2D(pool_size=(n_poolsize, n_poolsize)))
+
 # flatten output of convolutions
 model.add(Flatten())
 
@@ -231,7 +236,7 @@ model_name += '_Optimzer_' + 'SGD'
 
 # vary the constant learning rate
 model_name += '_LearningRate_' + 'Constant'
-learning_rate = 0.001
+learning_rate = 0.005
 
 optimizer = SGD(learning_rate=learning_rate)
 
