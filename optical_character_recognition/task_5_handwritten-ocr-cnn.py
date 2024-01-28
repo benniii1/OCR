@@ -194,7 +194,7 @@ dropout = 0.3
 
 n_epochs = 20
 
-model_name = '../task_4_handwritten-ocr-cnn/CNN_Handwritten_OCR_CNN' + str(n_cnn1planes) + '_KERNEL' + \
+model_name = '../task_5_handwritten-ocr-cnn/CNN_Handwritten_OCR_CNN' + str(n_cnn1planes) + '_KERNEL' + \
              str(n_cnn1kernel) + '_Epochs' + str(n_epochs)
 # figure_format='svg'
 figure_format = 'png'
@@ -222,7 +222,7 @@ model.add(MaxPool2D(pool_size=(n_poolsize, n_poolsize)))
 cnn3 = Conv2D(n_cnn1planes*4, kernel_size=(n_cnn1kernel, n_cnn1kernel), strides=(n_strides,n_strides), padding='valid',
               activation='relu')
 model.add(cnn3)
-model.add(Dropout(0.35))  # Insert dropout layer with a dropout rate of 0.2
+model.add(Dropout(0.5))  # Insert dropout layer with a dropout rate of 0.2
 model.add(MaxPool2D(pool_size=(n_poolsize, n_poolsize)))
 
 # flatten output of convolutions
